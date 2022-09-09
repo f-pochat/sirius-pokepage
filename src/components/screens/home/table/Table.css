@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap');
+
+.table-container {
+    margin-top: 10px;
+    width: 100%;
+    position: relative;
+}
+
+.scroll-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-rows: minmax(150px, auto);
+}
+
+.cell {
+    background-color: #C52018;
+    border-radius: 10px;
+    margin: 7px;
+    display: flex;
+}
+
+.cell:hover {
+    background-color: #e65a41;
+    cursor: pointer;
+}
+
+.lg-cell {
+    grid-column: span 1;
+    grid-row: span 3;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sm-cell {
+    grid-column: span 1;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.lg-cell > img {
+    height: 80%;
+}
+
+.sm-cell > img {
+    height: 90%;
+}
+
+.cell > h1 {
+    font-family: 'Bubblegum Sans', cursive;
+    color: white;
+}
+
+/* Spinner */
+.poke-spinner {
+    height: 100px;
+    width: 100px;
+    margin: auto;
+    background: linear-gradient(to bottom, rgb(254, 0, 1) 50%, white 50% );
+    border-radius: 50%;
+    border: 8px solid black;
+    animation: spin 1s linear infinite;
+    grid-column: span 4;
+}
+
+.poke-spinner::before {
+    content: '';
+    position: absolute;
+    height: 8px;
+    width: 100px;
+    background: black;
+    top: 50px;
+    transform: translatey(-50%);
+}
+
+.poke-spinner::after {
+    content: '';
+    position: absolute;
+    height: 38px;
+    width: 38px;
+    border-radius: 50%;
+    background: white;
+    top: 50px;
+    left: 50px;
+    transform: translate(-50%, -50%);
+    box-shadow: inset 0 0 0 8px black, inset 0 0 0 10px white, inset 0 0 0 12px black;
+
+}
+
+/* Spin Animation */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Scrollbar */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #e65a41;
+    border-radius: 10%;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #c52018;
+}
+
+@media only screen and (max-width: 1457px){
+    .scroll-container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 920px){
+    .scroll-container {
+        grid-template-columns: 1fr 1fr;
+    }
+    .lg-cell {
+        grid-row: span 2;
+    }
+}
+
+@media only screen and (max-width: 590px){
+    .scroll-container {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,32 @@
+
+.navbar {
+    min-height: 150px;
+    background-color: #9C5200;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.back-btn:hover{
+    color: darkgray;
+    cursor: pointer;
+}
+
+.poke-logo {
+    width: 20vw;
+}
+
+.sirius {
+    width: 6vw;
+}
+
+@media only screen and (max-width: 700px){
+    .poke-logo {
+        width: 40vw;
+    }
+
+    .sirius{
+        width: 20vw;
+    }
+}
