@@ -34,7 +34,7 @@ export const useGetPokemon = (id: number) => {
         })
     }
 
-    const {fetchMore} = useQuery(GETPOKEMONBYID, {
+    useQuery(GETPOKEMONBYID, {
         variables: {
             id: id,
         },

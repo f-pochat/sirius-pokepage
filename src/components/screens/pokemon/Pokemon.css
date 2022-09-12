@@ -5,6 +5,7 @@
 }
 
 .slider-image:hover {
+    cursor: pointer;
     filter: brightness(120%);
 }
 

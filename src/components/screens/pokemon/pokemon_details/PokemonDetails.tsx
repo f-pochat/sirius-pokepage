@@ -1,7 +1,7 @@
 import React from 'react';
 import './PokemonDetails.css';
-import PokemonStats from "../pokemon_stats/PokemonStats";
-import TypeIcons from "../type_icons/TypeIcons";
+import PokemonStats from "./pokemon_stats/PokemonStats";
+import TypeIcons from "./type_icons/TypeIcons";
 
 const PokemonDetails = (props:any) => {
 

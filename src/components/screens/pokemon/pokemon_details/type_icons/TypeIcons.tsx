@@ -18,7 +18,7 @@ import {
     rockIcon,
     steelIcon,
     waterIcon
-} from '../../../../assets/icons';
+} from '../../../../../assets/icons';
 
 const pokemonIcons = {
     bug: bugIcon,

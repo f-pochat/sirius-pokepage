@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import './Table.css'
 import InfiniteScroll from "react-infinite-scroll-component";
 import {useNavigate} from 'react-router-dom';
-import {useGetDemoPokemons} from "../../../../hooks/useGetDemoPokemons";
+import {useGetDemoPokemons} from "../../../../hooks";
 
 const Table = () => {
 
